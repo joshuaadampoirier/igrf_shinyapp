@@ -1,10 +1,12 @@
 shinyUI(pageWithSidebar(
     headerPanel("Example plot"),
     sidebarPanel(
-        sliderInput('mu', 'Guess at the mean value', value=70,
-                    min=62, max=74, step=0.05)
+        sliderInput('Latitude', 'Input Latitude', value=45,
+                    min=-90, max=90, step=0.05),
+        sliderInput('Longitude', 'Input Longitude', value=45,
+                    min=-180, max=180, step=0.05)
         ),
     mainPanel(
-        plotOutput('newHist')
+        h3('Hello world')
         )
     ))

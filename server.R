@@ -1,10 +1,5 @@
 library(ggplot2)
-
-a <- 6371.2             # reference radius of Earth
-
-# following radii (A & B) are used for transforming between geodetic and geocentric coordinates
-A <- 40680631.59 ^ 0.5  # semi-major axe of reference spheroid (equatorial radius of Earth, WGS84)
-B <- 40408299.89 ^ 0.5  # semi-minor axe of reference spheroid (polar radius of Earth, WGS84)
+source('helper.R')
 
 shinyServer(
     function(input, output, session) {
@@ -24,7 +19,11 @@ shinyServer(
             
         }, height=360, width=720)
         
-        output$selectedDate <- renderPrint(input$IGRFDate)
+        #output$selectedDate <- renderPrint(input$IGRFDate)
+        
+        output$igrf <- renderTable({
+            round(main(input$Elevation, input$Latitude, input$Longitude, input$IGRFDate), 2)
+        })
         
         observe({
             # get user-selected lat/lon via clicking the map

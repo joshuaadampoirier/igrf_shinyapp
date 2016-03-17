@@ -24,7 +24,6 @@ shinyUI(pageWithSidebar(
     # Map and outputs
     mainPanel(
         plotOutput('map', click="map_click"),
-        verbatimTextOutput("selectedDate"),
-        verbatimTextOutput("latlon")
+        tableOutput('igrf')
         )
     ))

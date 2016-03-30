@@ -1,4 +1,5 @@
 library(ggplot2)
+library(maps)
 source('helper.R')
 
 shinyServer(

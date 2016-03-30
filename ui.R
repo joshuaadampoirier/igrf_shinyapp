@@ -23,6 +23,8 @@ shinyUI(pageWithSidebar(
     
     # Map and outputs
     mainPanel(
+        p('This tool calculates the IGRF (International Geomagnetic Reference Field).  The IGRF model is put forth every five years by the IAGA (International Association of Geomagnetism and Aeronomy and is a description of the main geomagnetic field and its secular variation in terms of spherical harmonic models.  The tool calculates dec-declination, inc-inclination, Bh-horizontal component, Bx-north/south component, By-east/west component, Bz-vertical component, and TF-total field intensity.  dec and inc are reported in degrees, the remaining fields are presented in units nanotesla.  For further details click the link below.'),
+        a(href="http://www.ngdc.noaa.gov/IAGA/vmod/igrf.html", "IGRF Description by NOAA"),
         plotOutput('map', click="map_click"),
         tableOutput('igrf')
         )

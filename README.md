@@ -2,6 +2,7 @@
 title: "IGRF Calculator"
 author: "Joshua Poirier"
 date: "April 2016"
+output: pdf_document
 ---
 *** 
 #### An Interactive Web App using R's **shiny** package

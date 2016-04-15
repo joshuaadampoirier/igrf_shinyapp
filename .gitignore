@@ -1,0 +1,13 @@
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data Files
+.RData
+
+# Documentation build markdown file
+README-documentation.md
+README.html
+
+# shinyapps deployment folder
+shinyapps/
